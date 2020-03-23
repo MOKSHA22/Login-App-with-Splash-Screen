@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:loginwithsplashscreen/Animations/fadeAnimation.dart';
 
 class LoginPage extends StatefulWidget {
@@ -15,29 +17,29 @@ class _LoginPageState extends State<LoginPage> {
       //resizeToAvoidBottomInset : false,
       backgroundColor: Colors.white,
       body: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
           // Padding(padding: EdgeInsets.only(left: 10.0)),
-            FadeAnimation(1.2, Text("Login",
-              textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.black,
-                  fontFamily: 'Open_sans',
-                  fontSize: 40,
-                  fontWeight: FontWeight.w300,
-                  //frontStyle: FontStyle.normal,
-              ),
+          FadeAnimation(1.2, Text("Login",
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.black,
+              fontFamily: 'Open_sans',
+              fontSize: 40,
+              fontWeight: FontWeight.w300,
+              //frontStyle: FontStyle.normal,
             ),
+          ),
+          ),
+          SizedBox(height: 30,),
+          FadeAnimation(1.5, Container(
+            padding: EdgeInsets.all(20),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.white
             ),
-            SizedBox(height: 30,),
-            FadeAnimation(1.5, Container(
-              padding: EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white
-              ),
-              child: Column(
-                children: <Widget>[
+            child: Column(
+              children: <Widget>[
 //                  Container(
 //                    decoration: BoxDecoration(
 //                        border: Border(bottom: BorderSide(color: Colors
@@ -54,29 +56,38 @@ class _LoginPageState extends State<LoginPage> {
 //                      ),
 //                    ),
 //                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                        border: Border(bottom: BorderSide(color: Colors
-                            .grey[300]))
-                    ),
-                    child: TextField(
-                      // decoration: new InputDecoration(labelText: 'Email'),
-                      keyboardType: TextInputType.emailAddress,
-                      textInputAction: TextInputAction.next,
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        //labelText: 'Email',
-                        hintStyle: TextStyle(color: Colors.grey.withOpacity(
-                            .8)),
-                        hintText: "Email address",
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border(bottom: BorderSide(color: Colors.grey[300])),
+
+                  ),
+                  child: TextField(
+                    // decoration: new InputDecoration(labelText: 'Email'),
+                    keyboardType: TextInputType.emailAddress,
+                    textInputAction: TextInputAction.next,
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      //labelText: 'Email',
+                      hintStyle: TextStyle(color: Colors.grey.withOpacity(.8)),
+                      hintText: "Email address",
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                            color: Colors.grey[300]
+                        ),
+                      ),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                            color: Colors.deepOrange
+                        ),
                       ),
                     ),
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                        border: Border(bottom: BorderSide(color: Colors
-                            .grey[300]))
-                    ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                      border: Border(bottom: BorderSide(color: Colors
+                          .grey[300]))
+                  ),
 //                    child: TextField(
 //                      keyboardType: TextInputType.phone,
 //                      textInputAction: TextInputAction.next,
@@ -92,57 +103,162 @@ class _LoginPageState extends State<LoginPage> {
 //                      border: Border(bottom: BorderSide(color: Colors.grey[300])
 //                      ),
 //                    ),
-                    child: TextField(
-                      obscureText: true,
-                      textInputAction: TextInputAction.done,
-                      decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintStyle: TextStyle(color: Colors.grey.withOpacity(
-                              .8)),
-                          hintText: "Password"
+                  child: TextField(
+                    obscureText: true,
+                    textInputAction: TextInputAction.done,
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintStyle: TextStyle(color: Colors.grey.withOpacity(
+                          .8)),
+                      hintText: "Password",
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                            color: Colors.grey[300]
+                        ),
+                      ),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                            color: Colors.deepOrange
+                        ),
                       ),
                     ),
                   ),
-                ],
+                ),
+                Container(
+                  padding: EdgeInsets.only(top: 15.0, left: 20.0),
+                  alignment: Alignment(1.0, 0.0),
+                  child: InkWell(
+                    child: Text('Forgot Password',
+                      style: TextStyle(
+                          color: Color.fromRGBO(230, 10, 10, 0.6),
+                          fontFamily: 'Open_sans',
+                          fontWeight: FontWeight.w400,
+                          decoration: TextDecoration.underline
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          ),
+//            SizedBox(
+//              height: 4.0,),
+          SizedBox(height: 20,),
+          FadeAnimation(1.8, Center(
+            child: Container(
+              width: 200,
+              height: 40.0,
+              child: Material(
+                borderRadius: BorderRadius.circular(20.0),
+                shadowColor: Colors.redAccent,
+                color: Color.fromRGBO(230, 10, 10, 0.6),
+                elevation: 8.0,
+                child: GestureDetector(
+                  onTap: () {},
+                  child: Center(
+                    child: Text(
+                      'LOGIN',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Open_sans'
+                      ),
+                    ),
+                  ),
+                ),
               ),
-            )),
-            SizedBox(height: 40,),
+//                padding: EdgeInsets.all(15),
+//                decoration: BoxDecoration(
+//                    borderRadius: BorderRadius.circular(50),
+//                    color: Colors.deepOrange[800],
+//                ),
+//                child: Center(child: Text("Login",
+//                  style: TextStyle(color: Colors.white.withOpacity(.7)),
+//
+//                ))
+            ),
+          ),
+          ),
+      SizedBox(
+        height: 30,
+      ),
             FadeAnimation(1.8, Center(
               child: Container(
-                width: 120,
-                padding: EdgeInsets.all(15),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                    color: Colors.deepOrange[800],
-                ),
-                child: Center(child: Text("Login",
-                  style: TextStyle(color: Colors.white.withOpacity(.7)),
+              width: 200,
+              height: 40.0,
+                  child: Material(
+                      borderRadius: BorderRadius.circular(20.0),
+                      shadowColor: Colors.white,
+                      color: Colors.white,
+                      elevation: 8.0,
+                          child: GestureDetector(
+                            onTap: () {},
+                              child: Center(
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Center(
+                                      child: IconButton(
+                                icon: FaIcon(
+                                    FontAwesomeIcons.facebook),
+                                ),
+                                    ),
+//                                    SizedBox(
+//                                      width: 10.0,
+//                                    ),
+                                    Center(
+                                      child: Text(
+                                        'Login with Facebook',
+                                        style: TextStyle(
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.bold,
+                                            fontFamily: 'Open_sans'
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                )
 
-                ))
+                                  ),
+                                    ),
+                          ),
+                ),
+            ),
+            ),
+          SizedBox(height: 30),
+    FadeAnimation(2.0, Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'New to ArenaBuddy ?',
+                style: TextStyle(
+                  fontFamily: 'Open_sans',
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black
+                ),
               ),
-            )),
-          ],
-        ),
+              SizedBox(
+                width: 10.0,
+              ),
+              InkWell(
+                onTap: (){},
+                child: Text(
+                  'Register',
+                      style: TextStyle(
+                          color: Colors.redAccent,
+                          fontFamily: 'Open_sans',
+                          fontWeight: FontWeight.w500,
+                          decoration: TextDecoration.underline,
+                          fontSize: 20
+                      )
+                ),
+              )
+            ],
+          )
+          ),
+        ],
+      ),
     );
   }
-
-//        children: <Widget>[
-//          Container(
-//            child: Stack(
-//              children: <Widget>[
-//                Container(
-//                  padding: EdgeInsets.all(30),
-//                  child: Text(
-//                    'Login'
-//                  ),
-//                )
-//              ],
-//            ),
-//          )
-//        ],
-//      )
-//              }
-//}
-//
-
 }
