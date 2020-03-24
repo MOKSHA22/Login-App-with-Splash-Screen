@@ -2,17 +2,21 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:loginwithsplashscreen/Animations/fadeAnimation.dart';
+import 'package:loginwithsplashscreen/login_and_registration/registration.dart';
 
 class LoginPage extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() => _LoginPageState();
+
 }
 
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
+
       resizeToAvoidBottomPadding: false,
       //resizeToAvoidBottomInset : false,
       backgroundColor: Colors.white,
@@ -242,7 +246,12 @@ class _LoginPageState extends State<LoginPage> {
                 width: 10.0,
               ),
               InkWell(
-                onTap: (){},
+
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                  return Registration();
+                }
+                ));},
                 child: Text(
                   'Register',
                       style: TextStyle(
@@ -250,7 +259,7 @@ class _LoginPageState extends State<LoginPage> {
                           fontFamily: 'Open_sans',
                           fontWeight: FontWeight.w500,
                           decoration: TextDecoration.underline,
-                          fontSize: 20
+                          fontSize: 18
                       )
                 ),
               )

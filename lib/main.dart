@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loginwithsplashscreen/login_and_registration/registration.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:loginwithsplashscreen/Animations/fadeAnimation.dart';
 import 'package:loginwithsplashscreen/login_and_registration/login_page.dart';
@@ -111,6 +112,9 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
     final double width = MediaQuery.of(context).size.width;
     return  Scaffold(
       resizeToAvoidBottomPadding: false,
+//      routes: <String, WidgetBuilder>{
+//        '/registration': (BuildContext context)
+//      },
       body: Stack(
           fit: StackFit.expand,
           children: <Widget>[
