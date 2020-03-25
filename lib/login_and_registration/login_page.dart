@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -15,8 +17,9 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
 
-    return Scaffold(
-
+    return WillPopScope(
+        onWillPop: _onBackPressed,
+        child: Scaffold(
       resizeToAvoidBottomPadding: false,
       //resizeToAvoidBottomInset : false,
       backgroundColor: Colors.white,
@@ -268,6 +271,34 @@ class _LoginPageState extends State<LoginPage> {
           ),
         ],
       ),
+        ),
     );
   }
-}
+
+ Future<bool> _onBackPressed() {
+    return showDialog(context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        title: Text(
+            'Exit app?'),
+        content: Text(
+            'Are you sure?'),
+        actions: <Widget>[
+          FlatButton(
+            child: Text('No'),
+            onPressed: () {
+              Navigator.of(context).pop(false);
+            },
+          ),
+          FlatButton(
+            child: Text('Yes'),
+            onPressed: () {
+              Navigator.of(context).pop(true);
+              exit(0);
+            },
+          ),
+        ],
+      );
+    });
+    }
+ }
