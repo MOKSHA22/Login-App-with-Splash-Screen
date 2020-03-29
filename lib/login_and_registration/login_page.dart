@@ -238,7 +238,7 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
-                'New to ArenaBuddy ?',
+                'New user ?',
                 style: TextStyle(
                   fontFamily: 'Open_sans',
                   fontWeight: FontWeight.bold,
