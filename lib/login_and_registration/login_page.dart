@@ -159,10 +159,18 @@ class _LoginPageState extends State<LoginPage> {
               child: Material(
                 borderRadius: BorderRadius.circular(20.0),
                 shadowColor: Colors.redAccent,
-                color: Color.fromRGBO(230, 10, 10, 0.6),
-                elevation: 8.0,
-                child: GestureDetector(
-                  onTap: () {},
+                color: Colors.redAccent,
+                elevation: 9.0,
+                child: FlatButton(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18.0),
+                    side: BorderSide(
+                      color: Colors.redAccent
+                    ),
+                  ),
+                  color: Colors.redAccent,
+                  padding: EdgeInsets.all(8.0),
+                  onPressed: () {},
                   child: Center(
                     child: Text(
                       'LOGIN',
@@ -187,52 +195,52 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
           ),
-      SizedBox(
-        height: 30,
-      ),
-            FadeAnimation(1.8, Center(
-              child: Container(
-              width: 200,
-              height: 40.0,
-                  child: Material(
-                      borderRadius: BorderRadius.circular(20.0),
-                      shadowColor: Colors.white,
-                      color: Colors.white,
-                      elevation: 8.0,
-                          child: GestureDetector(
-                            onTap: () {},
-                              child: Center(
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: <Widget>[
-                                    Center(
-                                      child: IconButton(
-                                icon: FaIcon(
-                                    FontAwesomeIcons.facebook),
-                                ),
-                                    ),
-//                                    SizedBox(
-//                                      width: 10.0,
+//      SizedBox(
+//        height: 30,
+//      ),
+//            FadeAnimation(1.8, Center(
+//              child: Container(
+//              width: 200,
+//              height: 40.0,
+//                  child: Material(
+//                      borderRadius: BorderRadius.circular(20.0),
+//                      shadowColor: Colors.white,
+//                      color: Colors.white,
+//                      elevation: 8.0,
+//                          child: GestureDetector(
+//                            onTap: () {},
+//                              child: Center(
+//                                child: Row(
+//                                  mainAxisAlignment: MainAxisAlignment.center,
+//                                  children: <Widget>[
+//                                    Center(
+//                                      child: IconButton(
+//                                icon: FaIcon(
+//                                    FontAwesomeIcons.facebook),
+//                                ),
 //                                    ),
-                                    Center(
-                                      child: Text(
-                                        'Login with Facebook',
-                                        style: TextStyle(
-                                            color: Colors.black,
-                                            fontWeight: FontWeight.bold,
-                                            fontFamily: 'Open_sans'
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                )
-
-                                  ),
-                                    ),
-                          ),
-                ),
-            ),
-            ),
+////                                    SizedBox(
+////                                      width: 10.0,
+////                                    ),
+//                                    Center(
+//                                      child: Text(
+//                                        'Login with Facebook',
+//                                        style: TextStyle(
+//                                            color: Colors.black,
+//                                            fontWeight: FontWeight.bold,
+//                                            fontFamily: 'Open_sans'
+//                                        ),
+//                                      ),
+//                                    )
+//                                  ],
+//                                )
+//
+//                                  ),
+//                                    ),
+//                          ),
+//                ),
+//            ),
+//            ),
           SizedBox(height: 30),
     FadeAnimation(2.0, Row(
             mainAxisAlignment: MainAxisAlignment.center,
