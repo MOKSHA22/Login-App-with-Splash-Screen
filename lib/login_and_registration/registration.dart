@@ -158,10 +158,18 @@ class _RegistrationState extends State<Registration> {
               child: Material(
                 borderRadius: BorderRadius.circular(20.0),
                 shadowColor: Colors.redAccent,
-                color: Color.fromRGBO(230, 10, 10, 0.6),
-                elevation: 8.0,
-                child: GestureDetector(
-                  onTap: () {},
+                color: Colors.redAccent,
+                elevation: 9.0,
+                child: FlatButton(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18.0),
+                    side: BorderSide(
+                        color: Colors.redAccent
+                    ),
+                  ),
+                  color: Colors.redAccent,
+                  padding: EdgeInsets.all(8.0),
+                  onPressed: () {},
                   child: Center(
                     child: Text(
                       'SIGN UP',
@@ -174,6 +182,15 @@ class _RegistrationState extends State<Registration> {
                   ),
                 ),
               ),
+//                padding: EdgeInsets.all(15),
+//                decoration: BoxDecoration(
+//                    borderRadius: BorderRadius.circular(50),
+//                    color: Colors.deepOrange[800],
+//                ),
+//                child: Center(child: Text("Login",
+//                  style: TextStyle(color: Colors.white.withOpacity(.7)),
+//
+//                ))
             ),
           ),
           ),
