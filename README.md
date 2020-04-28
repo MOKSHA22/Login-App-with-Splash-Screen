@@ -1,6 +1,6 @@
 # loginwithsplashscreen
 
-Login with Splash Screen
+Login with Splash Screen Flutter
 
 ## Getting Started
 
