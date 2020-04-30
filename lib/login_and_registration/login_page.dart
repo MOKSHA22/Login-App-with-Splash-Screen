@@ -30,7 +30,7 @@ class _LoginPageState extends State<LoginPage> {
           // Padding(padding: EdgeInsets.only(left: 10.0)),
           FadeAnimation(1.2, Text("Login",
             textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.black,
+            style: TextStyle(color: Colors.white,
               fontFamily: 'Open_sans',
               fontSize: 40,
               fontWeight: FontWeight.w300,
