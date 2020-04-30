@@ -38,7 +38,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
           ),
-          SizedBox(height: 30,),
+          SizedBox(height: 20,),
           FadeAnimation(1.5, Container(
             padding: EdgeInsets.all(20),
             decoration: BoxDecoration(
